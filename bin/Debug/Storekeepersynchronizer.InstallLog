@@ -1,0 +1,55 @@
+﻿Installing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Installing service Storekeeper Synchronizer...
+Service Storekeeper Synchronizer has been successfully installed.
+Creating EventLog source Storekeeper Synchronizer in log Application...
+Committing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Uninstalling assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Removing EventLog source Storekeeper Synchronizer.
+Service Storekeeper Synchronizer is being removed from the system...
+Service Storekeeper Synchronizer was successfully removed from the system.
+Installing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Installing service Storekeeper Synchronizer...
+Service Storekeeper Synchronizer has been successfully installed.
+Creating EventLog source Storekeeper Synchronizer in log Application...
+Committing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Uninstalling assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Removing EventLog source Storekeeper Synchronizer.
+Service Storekeeper Synchronizer is being removed from the system...
+Service Storekeeper Synchronizer was successfully removed from the system.
+Installing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
+Installing service Storekeeper Synchronizer...
+Service Storekeeper Synchronizer has been successfully installed.
+Creating EventLog source Storekeeper Synchronizer in log Application...
+Committing assembly 'C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.InstallLog
+   assemblypath = C:\Users\UTHMAN\source\repos\StorekeeperSynchronizer\bin\Debug\Storekeepersynchronizer.exe
