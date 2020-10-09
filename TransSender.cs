@@ -116,13 +116,13 @@ namespace StorekeeperSynchronizer
                 LogUtility.ActivityLogger.WriteErrorLog(err2);
             }
         }
-        public void WriteLog(string message)
+        public void WriteLog(string message,string subject)
         {
             var err2 = new LogUtility.Error()
             {
                 ErrorDescription = message,
                 ErrorTime = DateTime.Now,
-                ModulePointer = "Error Synching Transactions",
+                ModulePointer = subject,
                 //StackTrace = ex.StackTrace
 
             };
@@ -133,13 +133,31 @@ namespace StorekeeperSynchronizer
             public string status { get; set; }
             public string message { get; set; }
         }
+
+        public static bool chk_con()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("https://www.google.com"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public async void PushTransactions()
         {
-
+            bool chkConn = false;
 
             try
             {
-                var client = new HttpClient();
+                chkConn = chk_con();
+                if (chkConn) { 
+                    var client = new HttpClient();
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 using (MySqlConnection con = new MySqlConnection())
@@ -152,7 +170,7 @@ namespace StorekeeperSynchronizer
                     cmd.Connection = con;
                     cmd.CommandText = "SELECT * FROM routing WHERE routeStatus='0'";
                     // cmd.Parameters.Add("username", MySqlDbType.VarChar).Value = username;
-                    
+
 
                     var url = "";
                     var routeJSON = "";
@@ -173,7 +191,7 @@ namespace StorekeeperSynchronizer
                             //update the transactions to prevent double picking
                             updateTrans(2, transID);
                             //var rs = JsonConvert.SerializeObject(t);
-                            WriteLog(routeJSON);
+                            WriteLog(routeJSON,"Transaction Picked for posting");
 
 
                             var content = new StringContent(routeJSON, Encoding.UTF8, "application/json");
@@ -197,7 +215,7 @@ namespace StorekeeperSynchronizer
                             if (rr.status == "00")
                             {
                                 var m = "Status:" + rr.status + " Message:" + rr.message;
-                                WriteLog(m);
+                                WriteLog(m,"Transaction Synching Successful");
                                 //updateMessage(1, smsID);
                                 updateTrans(1, transID);
                                 //Console.WriteLine("Success");
@@ -206,14 +224,17 @@ namespace StorekeeperSynchronizer
                             {
                                 // updateMessage(2, smsID);
                                 var m = "Status:" + rr.status + " Message:" + rr.message;
-                                WriteLog(m);
+                                WriteLog(m,"Transaction Synching Failed");
                                 updateTrans(0, transID);
                                 //Console.WriteLine("Error");
                             }
                         }
                     }
                 }
-
+            }else
+            {
+                    WriteLog(DateTime.Now+":No internet connection detected, waiting to try again","Internet Connection Error");
+            }
 
             }
             catch (Exception ex)
